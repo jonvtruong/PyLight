@@ -16,7 +16,7 @@ for list of possible cities: http://pythonhosted.org/astral/index.html
 def sunset():    
     a = Astral()
     location = a[cityName]
-    location.solar_depression = 'civil' #defines angle of sun to calculate time
+    location.solar_depression = 3 #defines angle of sun to calculate time
     sun = location.sun(date=datetime.today(), local=True) #returns a dictionary containing sunset,sunrise,dusk,dawn : times
 
     timeSunset = sun['dusk']
@@ -31,7 +31,7 @@ def sunset():
 if (__name__ == "__main__"):
     plug = SmartPlug(plugIP)
     bulb = SmartBulb(bulbIP)
-
+  #  v = sunset()
     if(bulb.is_on and sunset()): #if the bulb is currently on and it's night time then turn off the bulb and turn on lamp#transition to 50% then turn on lamp then transition to 0
         bulb.set_light_state({'on_off': 0, 'transition_period': 3000})
         plug.turn_on()
