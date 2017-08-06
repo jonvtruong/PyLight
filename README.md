@@ -1,4 +1,4 @@
 # PyLight
-Controls TP-Link smart bulbs and switches based on sunrise/sunset times. Utilizes the pyHS100 library by GadgetReactor. 
+Controls TP-Link smart bulbs(LB-1xx) and switches(HS-1xx) based on sunrise/sunset times. Utilizes the pyHS100 library by GadgetReactor. 
 
 For more details: https://github.com/GadgetReactor/pyHS100
